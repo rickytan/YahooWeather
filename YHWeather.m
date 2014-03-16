@@ -140,7 +140,7 @@
     static NSInteger retriedTimes = 0;
 
     __block typeof(self) weakSelf = self;
-    NSString *urlStr = [NSString stringWithFormat:@"%@?w=%@", YAHOO_WEATHER_API, woeid];
+    NSString *urlStr = [NSString stringWithFormat:@"%@?w=%@&u=c", YAHOO_WEATHER_API, woeid];
     NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url]
                                        queue:[NSOperationQueue mainQueue]
